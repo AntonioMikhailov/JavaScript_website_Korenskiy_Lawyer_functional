@@ -1,0 +1,139 @@
+.s5{
+	padding:60px 0px 0px 0px;
+  &-title span {
+    font-family:b;
+    color:$purple;
+    font-size:34px;
+  }
+  
+  &-row {
+    display:flex;
+    margin:0 -20px;
+    margin-top:100px;
+  }
+  &-left {
+    max-width: 768px;
+    flex-basis:50%;
+    padding:0 20px;
+    img {
+      width:100%;
+      height: auto;
+    }
+  }
+
+  &-right {
+    flex-basis:50%;
+    padding:0 20px;
+  }
+  &-right__item {
+    margin:0px 0px 15px 0px;
+  }
+  &-data__row {
+    display:flex;
+    justify-content:space-between;
+  }
+  &-data__year {
+    font-family:b;
+    font-size:22px;
+    color:$purple;
+
+    span {
+      font-family:b;
+      font-size:18px;
+      color:$purple;
+    }
+  }
+ 
+  &-data__number {
+    font-family:b;
+    font-size:22px;
+    color:$purple;
+  }
+  &-item__timeline {
+    position:relative;
+    width:100%;
+    height:10px;
+    background-color: $orange;
+    overflow:hidden;
+    margin:5px 0px 0px 0px;
+
+    &::before {
+      content:'';
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:10px;
+      background-color:$purple;
+      transition:all 2.3s ease .0s;
+    }
+  }
+  
+  .timeline-active.timeline1::before {
+    left:-85%;
+  }
+  .timeline-active.timeline2::before {
+    left:-75%;
+  }
+  .timeline-active.timeline3::before {
+    left:-65%;
+  }
+  .timeline-active.timeline4::before {
+    left:-50%;
+  }
+  .timeline-active.timeline5::before {
+    left:-25%;
+  }
+  .timeline-active.timeline6::before {
+    left:-5%;
+  }
+  @media screen and (max-width:768px) {
+    &-title span {
+    font-size:24px;
+  }
+  }
+  @media screen and (max-width:650px) {
+    & {
+    padding:40px 0px 0px 0px;
+  }
+  &-row {
+    margin-top:60px;
+  }
+  &-item__timeline {
+    height:7px;
+    margin:5px 0px 0px 0px;
+  }
+  &-data__year {
+    font-size:18px;
+  }
+  &-data__year span {
+    font-size:16px;
+  }
+  &-data__number {
+    font-size:18px;
+  }
+  }
+  @media screen and (max-width:550px) {
+    &-row {
+    display:flex;
+    flex-direction:column;
+    margin-top:30px;
+  }
+  &-left img {
+    width:75%;
+  }
+  &-right {
+    margin:30px 0px 0px 0px;
+  }
+  }
+  @media screen and (max-width:400px) {
+    & {
+      padding:20px 0px 0px 0px;
+    }
+    &-title span {
+    font-size:16px;
+  }
+  }
+
+
+} //

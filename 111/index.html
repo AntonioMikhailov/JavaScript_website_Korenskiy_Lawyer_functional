@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <div class="main">
+    <div class="text">text</div>
+    <div class="text">text</div>
+    <div class="text">text</div>
+    <div class="text">text</div>
+  </div>
+  <script>
+    class User {
+      constructor() {
+      
+     }
+      color({wrapper = null, box = null} ={}) { 
+        this.wrapper = document.querySelector(wrapper);
+        this.box = document.querySelectorAll(box);
+         this.box.forEach(item => {
+          item.style.color = 'red';
+          item.style.fontSize = '40px';
+        });
+        this.wrapper.style.background = 'blue';
+      }
+    }
+
+    let oneUser = new User({
+      wrapper:'.wrapper', 
+      box: '.box'
+    });
+    // oneUser.color();
+    console.log(oneUser); // User {wrapper: div.wrapper, box: NodeList(3)}
+
+// new User().color({
+//       wrapper:'.main', 
+//       box: '.text'
+//     });
+    // twoUser().color(); // вызываем для других элементов
+   new User().color({
+      wrapper:'.main', 
+      box: '.text'
+    });
+  </script>
+</body>
+
+</html>

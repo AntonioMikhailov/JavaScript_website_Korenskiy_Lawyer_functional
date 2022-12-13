@@ -1,0 +1,253 @@
+
+.s1 {
+	position:relative;
+	background-color:$purple;
+
+
+  &-slideBlock {
+    position:absolute;
+    visibility:hidden;
+    opacity:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    transition:all 1.5s ease .0s;
+    
+    
+  }
+  &-slideBlock__active {
+  opacity:1;
+    visibility:visible;
+  }
+  &-indicator__Row {
+    width:100%;
+    position:absolute;
+    bottom:20px;
+  display:flex;
+  justify-content:center;
+    z-index:2;
+  }
+  &-indicator__item {
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background-color:$greyMedium;
+    margin:0px 12px 0px 0px;
+    cursor:pointer;
+    transition:all 0.5s ease .0s;
+  }
+  &-indicator__item:last-child {
+    margin:0px 0px 0px 0px;
+  }
+  &-indicator__active {
+    background-color:$orange;
+  }
+  &-backgroundImage {
+ 
+  width:100%;
+  }
+  &-backgroundImage img {
+    
+  width:100%;
+  height: auto; 
+    object-fit:cover;
+    background-size:cover;
+  }
+  &-textRow {
+    position:absolute;
+    max-width:940px;
+    top:30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:100px 20px 0px 20px;
+    margin:0 auto;
+    opacity:0;
+    visibility:hidden;
+    transition:all 1.3s ease .0s;
+  }
+  .oneTextRow__show {
+    opacity:1;
+    visibility:visible;
+  transform:translateY(-30px);
+  }
+  &-smallHeader {
+    color:$orange;
+    font-family:b;
+    font-size:22px;
+    letter-spacing:0.07rem;
+  }
+  &-smallHeader::before {
+    content:'';
+    display:inline-block;
+    vertical-align:middle;
+    width:100px;
+    height:1px;
+    background-color:$orange;
+    margin:0px 20px 0px 0px;
+  }
+  &-smallHeader::after {
+    content:'';
+    display:inline-block;
+    vertical-align:middle;
+    width:100px;
+    height:1px;
+    background-color:$orange;
+    margin:0px 0px 0px 20px;
+  }
+  &-header {
+    margin:20px 0px 0px 0px;
+    color:$greyLight;
+    text-align:center;
+  }
+  &-text {
+    margin:20px 0px 0px 0px;
+    color:$greyMedium;
+    text-align:center;
+    font-size:22px;
+  }
+  &-text a {
+    color:$orange; 
+     font-weight: 700;  
+  }
+  &-button {
+    width:300px;
+    height:40px;
+    margin:0 auto;
+    color:$greyMedium;
+    text-transform:uppercase;
+    font-size:14px;
+    letter-spacing:0.06rem;
+    margin:40px 0px 0px 0px;
+    border:1px solid $greyMedium;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:all 0.3s ease .0s;
+  }
+  &-button:hover {
+    background-color:$orange;
+    color:$purple;
+  }
+  @media screen and (max-width:1350px) {
+    &-textRow {
+    padding:60px 0px 0px 0px;
+  }
+  }
+  @media screen and (max-width:1150px) {
+    &-textRow {
+    padding:50px 20px 0px 20px;
+  }
+  &-smallHeader {
+    font-size:18px;
+  }
+  &-header {
+    margin:15px 0px 0px 0px;
+    font-size:32px;
+  }
+  &-text {
+    margin:20px 0px 0px 0px;
+    font-size:18px;
+  }
+  &-button {
+    width:250px;
+    height:30px;
+    font-size:12px;
+    margin:30px 0px 0px 0px;
+  }
+  &-indicator__item {
+    width:10px;
+    height:10px;
+  }
+  }
+  @media screen and (max-width:960px) {
+    &-smallHeader {
+    font-size:16px;
+  }
+  &-header {
+    margin:10px 0px 0px 0px;
+    font-size:28px;
+  }
+  &-text {
+    margin:10px 0px 0px 0px;
+    font-size:16px;
+  }
+  &-button {
+    width:250px;
+    height:30px;
+    font-size:12px;
+    margin:20px 0px 10px 0px;
+  }
+  
+  }
+  @media screen and (max-width:835px) {
+    &-textRow {
+    padding:50px 10px 0px 10px;
+  }
+  &-backgroundImage img {
+    height:300px;
+   
+  }
+  }
+  @media screen and (max-width:650px) {
+    &-textRow {
+    padding:40px 10px 0px 10px;
+  }
+  &-smallHeader {
+    font-size:14px;
+  }
+  &-smallHeader::before {
+    width:60px;
+    margin:0px 10px 0px 0px;
+  }
+  &-smallHeader::after {
+    width:60px;
+    margin:0px 0px 0px 10px;
+  }
+  &-header {
+    margin:10px 0px 0px 0px;
+    font-size:22px;
+  }
+  &-text {
+    margin:10px 0px 0px 0px;
+    font-size:14px;
+    a {
+      color:$orange; 
+      font-size: 14px;
+       font-weight: 700;  
+    }
+  }
+
+  &-button {
+    width:250px;
+    height:30px;
+    font-size:12px;
+    margin:15px 0px 0px 0px;
+  }
+  }
+  @media screen and (max-width:400px) {
+    &-textRow {
+    padding:35px 10px 0px 10px;
+  }
+  &-smallHeader {
+    font-size:14px;
+  }
+  &-header {
+    margin:10px 0px 0px 0px;
+    font-size:22px;
+  }
+  &-text {
+    margin:10px 0px 0px 0px;
+    font-size:14px;
+  }
+  &-button {
+    width:250px;
+    height:25px;
+    font-size:12px;
+    margin:10px 0px 0px 0px;
+  }
+  }
+
+}

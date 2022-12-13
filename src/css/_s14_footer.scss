@@ -1,0 +1,222 @@
+.s14{
+	background-color:$purple;
+	margin:120px 0px 0px 0px;
+	padding:50px 30px 50px 20px;
+  
+  &-row {
+    display:flex;
+    margin:0 -20px;
+    justify-content:space-between;
+  }
+  &-left {
+    flex-basis:25%;
+    padding:0 20px;
+    margin:0px 40px 0px 0px;
+  }
+
+  &-left__text {
+    color:#e8e8e8;
+    text-align:center;
+    margin:10px 0px 0px 0px;
+    font-size:16px;
+  }
+  &-right {
+    flex-basis:75%;
+    padding:0 20px;
+  }
+  &-right__row {
+    display:flex;
+    margin:0 -20px;
+  }
+  &-right__column {
+    flex-basis:33.3%;
+    padding:0 20px;
+  }
+  &-right__title {
+    color:#DBC29E;
+    font-family:b;
+    margin:0px 0px 20px 0px;
+    white-space:nowrap;
+  }
+  &-right__list {
+    color:#e8e8e8;
+    margin:0px 0px 10px 0px;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    transition:all 0.3s ease .0s;
+  }
+  &-right__list::before {
+    content:'\2022';
+    font-size:20px;
+    margin:0px 5px 0px 0px;
+    color:#DBC29E;
+  }
+  &-right__list:hover {
+    color:#DBC29E;
+  }
+  &-right__adressColumn {
+    padding:0 20px;
+  }
+  &-adressColumn__item {
+    display:block;
+    color:#e8e8e8;
+    font-size:16px;
+    margin:0px 0px 15px 0px;
+    transition:all 0.3s ease .0s;
+  }
+  &-adressColumn__item:hover {
+    color:#DBC29E;
+  }
+  &-adressColumn__item::before {
+    transition:all .3s ease .0s;
+  }
+  &-adressColumn__item:hover::before {
+    color:#e8e8e8;
+  }
+  &-adress::before {
+    content:'\e903';
+    font-family:s;
+    color:#DBC29E;
+    margin:0px 10px 0px 0px;
+  }
+  &-phone::before {
+    content:'\e902';
+    font-family:s;
+    color:#DBC29E;
+    margin:0px 10px 0px 0px;
+  }
+  &-email::before {
+    content:'\e904';
+    font-family:s;
+    color:#DBC29E;
+    margin:0px 10px 0px 0px;
+  }
+  &-workTime::before {
+    content:'\e914';
+    font-family:s;
+    color:#DBC29E;
+    margin:0px 10px 0px 0px;
+  }
+  &-social__row {
+    display:flex;
+    margin:40px 0px 0px 0px;
+  }
+  &-social__item {
+    font-family:s;
+    margin:0px 15px 0px 0px;
+    color:#DBC29E;
+    cursor:pointer;
+    transition:all 0.3s ease .0s;
+  }
+  &-social__item:hover {
+    color:#e8e8e8;
+  }
+
+  @media screen and (max-width:1000px) {
+    & {
+    margin:80px 0px 0px 0px;
+    padding:40px 20px 20px 20px;
+  }
+  &-row {
+    display:flex;
+    flex-direction:column;
+  }
+  &-left {
+    flex-basis:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  &-right {
+    margin:40px 0px 0px 0px;
+  }
+  &-right__title {
+    font-size:18px;
+  }
+  }
+  @media screen and (max-width:650px) {
+    &-right__row {
+    flex-wrap:wrap;
+  }
+  &-right__column {
+    flex-basis:50%;
+    margin:0px 0px 40px 0px;
+  }
+  &-right__title {
+    margin:0px 0px 10px 0px;
+  }
+  &-right__list {
+    margin:0px 0px 0px 0px;
+  }
+  }
+  @media screen and (max-width:430px) {
+    &{
+    margin:50px 0px 0px 0px;
+    padding:30px 20px 10px 20px;
+  }
+  &-right__column {
+    flex-basis:100%;
+    margin:0px 0px 40px 0px;
+  }
+  }
+
+} // 
+
+.anchor-wrapper {
+	position:fixed;
+	z-index:20;
+	bottom:0px;
+	right:20px;
+	width:60px;
+	height:60px;
+	border-radius:7px;
+
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	cursor:pointer;
+	visibility:hidden;
+  opacity:0;
+	transition:all 0.5s ease .0s;
+}
+.anchor-button {
+	position:relative;
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	background-color:$orange;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	transition:all 0.3s ease .0s;
+}
+.anchor-button::before {
+	content:'\e900';
+	position:absolute;
+	font-family:s;
+	display:inline-block;
+	color:$greyMedium;
+	font-size:8px;
+	transform:rotate(180deg);
+	margin:-2px 0px 0px 0px;
+}
+.anchor-button:hover {
+	background-color:$purple;
+}
+.anchor-active {
+	opacity:1;
+	visibility:visible;
+	bottom:20px;
+}
+
+.footer-design {
+  font-size: 12px;
+  font-family: r;
+   letter-spacing:  0.05rem;
+  
+}
+

@@ -1,0 +1,95 @@
+.s13 {
+	padding:120px 0px 0px 0px;
+  &-text {
+    max-width:900px;
+    text-align:center;
+    margin:0 auto;
+    margin-top:40px;
+  }
+  &-row {
+    display:flex;
+    margin:0 -20px;
+    margin-top:50px;
+  }
+  &-left {
+    flex-basis:60%;
+    padding:0 20px;
+  }
+  &-left iframe {
+    width:100%;
+    height:100%;
+  }
+  &-right {
+    padding:0 20px;
+    flex-basis:40%;
+  }
+  &-formRow {
+    width:100%;
+  }
+  &-input {
+    margin:0px 0px 20px 0px;
+    width:100%;
+    border:1px solid #E8E8E8;
+    border-radius:0;
+  }
+  &-textarea {
+    width:100%;
+    border:1px solid #E8E8E8;
+    border-radius:0;
+    height:150px;
+    margin: 0px 0px 10px 0px;
+  }
+  &-buttom {
+    width:100%;
+    height:40px;
+    background-color:$purple;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-transform:uppercase;
+    color:#e8e8e8;
+    font-size:14px;
+    cursor:pointer;
+    transition:all 0.3s ease .0s;
+    border:1px solid $purple;
+    margin:0 auto;
+  }
+  &-buttom:hover {
+    color:$purple;
+    border:1px solid $purple;
+    background-color:transparent;
+  }
+  .active-form {
+    background-color: $orange;
+    border:  1px solid  $orange;
+    color: $purple;
+  }
+  @media screen and (max-width:768px) {
+   & {
+    padding:80px 0px 0px 0px;
+  }
+  &-row {
+    display:flex;
+    flex-direction:column;
+    margin-top:50px;
+  }
+  &-left iframe {
+    height:300px;
+  }
+  &-right {
+    max-width:400px;
+    margin:40px 0px 0px 0px; 
+  }
+  }
+  @media screen and (max-width:500px) {
+    & {
+    padding:50px 0px 0px 0px;
+  }
+  &-text {
+    margin-top:20px;
+  }
+  &-row {
+    margin-top:30px;
+  }
+  }
+}

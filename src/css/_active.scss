@@ -1,0 +1,23 @@
+.s13 .active-warn {
+  background-color: #620000;
+color: #ffffff;
+border:  1px solid #620000;
+}
+.active-navMenu {
+  position: relative;
+}
+.active-navMenu::before {
+  content:'';
+  position:absolute;
+  top:30px;
+  left:0;
+  width:100%;
+  height:1px;
+  background-color:#dbc29e;
+   transition:all 0.3s ease .0s;
+  transition-delay:0.3s;
+ }
+.active-mobile {
+  background-color: $orange;
+  color: $purple;
+ }

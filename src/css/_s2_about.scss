@@ -1,0 +1,114 @@
+.s2 {
+	padding:100px 0px 0px 0px;
+
+  &-text {
+    text-align:center;
+    max-width:800px;
+    margin:0 auto;
+    margin-top:40px;
+  }
+  &-row {
+    display:flex;
+    margin-top:60px;
+  }
+  &-left {
+    flex-basis:70%;
+    margin:0px 20px 0px 0px;
+    padding:0px 0px 40px 0px;
+  }
+  
+  &-signature {
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    margin:30px 0px 0px 0px;
+  }
+  &-signature-name {
+    margin:0px 20px 0px 0px;
+  }
+  &-signature-image img {
+    width:110px;
+  }
+  &-right {
+    flex-basis:30%;
+    position:relative;
+    
+    img {
+     width: 450px;
+     height: auto;
+      bottom:0;
+      position:absolute;
+      width:90%;
+      object-fit:cover;
+    }
+
+  }
+
+  @media screen and (max-width:900px) {
+    & {
+    padding:60px 0px 0px 0px;
+  }
+  &-left {
+    flex-basis:60%;
+  }
+  &-right {
+    flex-basis:40%;
+  }
+  }
+  @media screen and (max-width:768px) {
+    & {
+    padding:40px 0px 0px 0px;
+  }
+  &-title {
+  }
+  &-row {
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:40px;
+  }
+  &-left {
+    flex-basis:100%;
+  }
+  &-right {
+    height:420px;
+    flex-basis:100%;
+
+    img {
+      height: auto;
+      bottom:0;
+      right:0;
+      max-width:270px;
+    }
+  }
+  
+  &-text {
+    margin-top:30px;
+  }
+  .t-signature-image img {
+    width:100px;
+  }
+  }
+  @media screen and (max-width:400px) {
+    &-text {
+    margin-top:20px;
+  }
+  .t-signature-image img {
+    width:80px;
+  }
+  &-right {
+    height:300px;
+    flex-basis:100%;
+    
+    img {
+      bottom:0;
+      right:0;
+      width:200px;
+      height: auto;
+    }
+  }
+
+  }
+
+
+
+} //
